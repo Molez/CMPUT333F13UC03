@@ -1,21 +1,16 @@
 Run in debug mode:
 
 $ make debug
-$ ./debug
+$ ./debug.out
 
-Run in debug mode with additional debug print statements (current issues):
+Debug mode prints output in "*.debug" files that will be found
+in the current directory.
 
-$ set PRINTDEBUG
-$ make debug
-$ ./debug
 
-If you don't want to print the current issues' debug statements:
-
-$ unset PRINTDEBUG
 
 Run in regular mode (not complete):
 
 $ make
-$ ./part1
+$ ./part1.out
 
 

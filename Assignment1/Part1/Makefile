@@ -4,13 +4,13 @@ DEPS = vinegere.h
 CFLAGS=-DDEBUG
 
 part1 : $(OBJECTS)
-	$(CC) -o part1 $^
+	$(CC) -o part1.out $^
 
 %.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< 
 
 debug : maindebug.o vinegeredebug.o debug.o
-	$(CC) -o debug $^ $(CFLAGS)
+	$(CC) -o debug.out $^ $(CFLAGS)
 
 maindebug.o: main.c  $(DEPS) debug.h
 	$(CC) -c -o $@ $< $(CFLAGS)

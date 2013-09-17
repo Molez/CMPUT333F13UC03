@@ -3,9 +3,6 @@
 #include <string.h>
 #include "vinegere.h"
 
-char encrypt(char, char);
-char decrypt(char, char);
-
 char encrypt(char key, char plain)
 {
 	char pl = plain & 0xf;
@@ -24,6 +21,11 @@ char decrypt(char key, char cypher)
 	char kh = (key >> 4) & 0xf;
 	char pl = '\0', ph = '\0';
 	int i;
+
+	if (kl < 2 || kl > 7 || kh < 3 || kh > 7)
+	{
+		return 0;
+	}
 
 	for (i = 0; i < 16; i++)
 	{
@@ -51,7 +53,7 @@ char decrypt(char key, char cypher)
 		printf("\n");
 #endif
 #ifdef DEBUG
-		return '_';
+		return 0;
 #endif
 	}
 
@@ -62,7 +64,7 @@ char decrypt(char key, char cypher)
 		printf("pl not found\n");
 #endif
 #ifdef DEBUG
-		return '_';
+		return 0;
 #endif
 	}
 

@@ -18,8 +18,15 @@ static char map[16][16] = {
 {0xa, 0xd, 0xe, 0x9, 0xf, 0x7, 0x6, 0x8, 0x4, 0x5, 0x1, 0x0, 0x2, 0xb, 0x3, 0xc},
 {0xf, 0x4, 0x1, 0x6, 0x0, 0x2, 0x3, 0x7, 0xb, 0xa, 0x8, 0x9, 0xd, 0xe, 0xc, 0x5}};
 
+static char keych[] ={
+ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
+ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
+ '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
+
 void printcypher(const char *);
 void printplain(const char *);
+char encrypt(char, char);
+char decrypt(char, char);
 void encryptstr(char *, const char *, const char *);
 void decryptstr(char *, const char *, const char *);
 
